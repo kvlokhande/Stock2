@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.stock.entity.Stock;
@@ -19,8 +20,8 @@ public class StockController {
 	StockService stockService;
 	
 
-	@MessageMapping("/stocks")
-	@SendTo("/topic/stocks")
+	//@MessageMapping("/stocks")
+	@GetMapping("/stocks")
 	public ResponseEntity<List<Stock>> getAllStocks(){
 		List<Stock> stocks = stockService.getAllStocks();
 		return new ResponseEntity<>(stocks,HttpStatus.OK);
