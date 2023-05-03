@@ -1,9 +1,9 @@
 spring:
    datasource:
-      url: jdbc:mysql://localhost:3306/stockprices
+      url: jdbc:mysql://stockpricedb.ce1bmigefdql.eu-north-1.rds.amazonaws.com:3306/stockpricedb
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
-      password: root
+      password: root1234
    jpa:
       hibernate.ddl-auto: update
       properties:
