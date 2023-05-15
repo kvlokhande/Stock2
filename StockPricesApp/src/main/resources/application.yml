@@ -11,4 +11,4 @@ spring:
             dialect: org.hibernate.dialect.MySQL8Dialect
             
 server:
-  port: 9090
+  port:7070
